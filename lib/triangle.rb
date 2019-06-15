@@ -9,7 +9,7 @@ class Triangle
   end
 
   def kind
-    if (s1 * s2 * s3) == 0 || (s1 + s2) <= s3 || (s2 + s3) <= s1 || (s3 + s1) <= s2
+    if ((s1 * s2 * s3) == 0) || ((s1 + s2) <= s3) || ((s2 + s3) <= s1) || ((s3 + s1) <= s2)
 
         raise TriangleError
       #   puts error.message
@@ -26,17 +26,16 @@ class Triangle
       self.kind = :scalene
     end
   end
-end
+
 
 
 class TriangleError < StandardError
-  def message
-    puts "not a triangle"
-  end
+  # def message
+  #   puts "not a triangle
 
 end
 
-
+end
 
 
 #   def initialize(side1, side2, side3)
